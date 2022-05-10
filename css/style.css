@@ -1,0 +1,251 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: #3face4;
+    background-image: url(../img/bg-01.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#wrapper {
+    width: 100%;
+    height: 750px;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.box {
+    display: grid;
+    grid-template-columns: minmax(250px, 400px);
+    margin: 0 5px;
+    padding: 0 70px 0 59px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 3px 2px 15px 0px rgba(0, 0, 0, .5);
+}
+
+h1 {
+    margin: 20px 0 10px 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    font-size: 39px;
+    line-height: 1.2;
+    text-align: center;
+    color: rgba(51, 51, 51, 0.9);
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    padding-left: 7px;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.5;
+    color: #666666;
+}
+
+input[type="text"], input[type="password"] {
+    display: block;
+    width: 100%;
+    height: 55px;
+    margin: 5px;
+    padding: 0 0px 0 40px;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.2;
+    color: #808080;
+    border: none;
+    border-bottom: 2px solid #d9d9d9;
+}
+
+input[type="text"]::placeholder, input[type="password"]::placeholder {
+    color:  #666666;
+    opacity: 0.5;
+}
+
+.passmail {
+    position: relative;
+}
+
+.far, .fas {
+    position: absolute;
+    top: 44px;
+    left: 18px;
+    font-size: 18px;
+    color: #666666;
+    opacity: .5;
+    transition: all 0.4s;
+}
+
+.borda {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -2px;
+    left: -2px;
+    pointer-events: none;
+}
+
+
+.borda::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    left: 7px;
+    width: 0;
+    height: 2px;
+    background: #7f7f7f;
+    transition: all 0.4s;
+}
+
+
+input[type="text"]:focus + .borda::before,
+input[type="password"]:focus + .borda::before {
+    width: 100%;
+}
+
+input[type="text"]:focus + .borda + .fa-user,
+input[type="password"]:focus + .borda + .fa-lock {
+    color: #a64bf4;
+    opacity: 1;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+form a {
+    display: inline-block;
+    margin: 13px 0 25px 10px;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.7;
+    color: #666666;
+    transition: all .4s;
+}
+
+form a:hover {
+    color: #a64bf4;
+}
+
+input[type="submit"] {
+    display: block; 
+    width: 100%;
+    height: 55px;
+    font-size: 16px;
+    font-family:  'Open Sans', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 1.5;
+    color: #fff;
+    background: transparent;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+}
+
+.efeito {
+    display: block;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    border-radius: 25px;
+    overflow: hidden;
+    margin: 0 auto;
+    box-shadow: 0 5px 30px 0px rgba(3, 216, 222, 0.2);
+}
+
+.efeito2 {
+    position: absolute;
+    z-index: -1;
+    width: 300%;
+    height: 55px;
+    background: #a64bf4;
+    background: linear-gradient(to left, #00dbde, #fc00ff, #00dbde, #fc00ff);
+    top: 0;
+    left: -100%;
+    transition: all 0.4s;
+}
+
+.efeito:hover .efeito2 {
+    left: 0;
+}
+
+p {
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    line-height: 1.5;
+    color: #666666;
+}
+
+.icones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0 30px 0;
+}
+
+.icones a {
+    margin-left: 10px;
+    font-size: 25px;
+    color: #fff;
+}
+
+.fa-facebook-f, .fa-twitter, .fa-google {
+    background: #3b5998;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding-top: 14px;
+    text-align: center;
+    transition: all 0.4s;
+}
+
+.fa-twitter {
+    background:#1da1f2;
+}
+
+.fa-google {
+    background:#ea4335;
+}
+
+.fab:hover {
+    color: #fff;
+    background-color: #333333;
+}
+
+.footer {
+    font-family:  'Open Sans', sans-serif;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: bold;
+    color: #333333;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 10px auto 20px auto;
+    transition: all 0.4s;
+}
+
+.footer:hover {
+    color: #666666;
+}
+
+ @media (max-width:400px) {
+    .box {
+        padding: 0 30px 0 30px;
+    }
+}
